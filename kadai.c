@@ -42,6 +42,7 @@ int main(){
 	}
 	
 	qsort(sci,20,sizeof(int),compare);
+	qsort(eng,20,sizeof(int),compare);
 
 
         printf("理科の平均:%f, 標準偏差:%f,合計点%f\n", avg(sci,20),dev(sci,20),sum(sci,20));
@@ -49,8 +50,9 @@ int main(){
 	for(int i=0;i<20;i++){
 		printf("%d人目偏差値｜英語：%f, 理科：%f\n",i,dev_eng[i],dev_sci[i]);
 	}
+	printf("点数の高い順に表示します。\n");
 	for(int i=0;i<20;i++){
-		printf("ソート%d\n",sci[i]);
+		printf("理科:%d, 英語:%d\n",sci[i],eng[i]);
 	}
 
 }

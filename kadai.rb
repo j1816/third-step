@@ -31,6 +31,13 @@ p sci.avg
 print "標準偏差：" 
 p sci.standard_deviation
 
+puts "偏差値"
+sci.each do |n|
+  puts "#{10*(n-sci.avg)/sci.standard_deviation+50}"
+end
+puts "点数降順"
+p sci.sort.reverse
+
 print "\n"
 
 print "英語\n"
@@ -40,3 +47,10 @@ print "平均："
 p eng.avg
 print "標準偏差：" 
 p eng.standard_deviation
+
+puts "偏差値"
+sci.each do |n|
+  puts "#{10*(n-eng.avg)/eng.standard_deviation+50}"
+end
+puts "点数降順"
+p eng.sort.reverse
